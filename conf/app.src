@@ -1,0 +1,6 @@
+SOURCE_URL=https://framagit.org/toitoinebzh/petitesannonces/-/archive/master/petitesannonces-master.tar.gz
+SOURCE_SUM=247895eb74422f36e6b42640d51a6654ddaf57ffa0ea94841e86b717ef337f79
+SOURCE_SUM_PRG=sha256sum
+SOURCE_FORMAT=tar.gz
+SOURCE_IN_SUBDIR=true
+SOURCE_FILENAME=
