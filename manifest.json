@@ -8,7 +8,7 @@
     },
     "version": "0.1.0~ynh1",
     "url": "https://framagit.org/toitoinebzh/petitesannonces",
-    "license": "AGPLv3",
+    "license": "AGPL-3.0-or-later",
     "maintainer": {
         "name": "Antoine",
         "email": "antoine@miaou.org"

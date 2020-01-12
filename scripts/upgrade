@@ -148,6 +148,8 @@ ynh_add_fpm_config
 
 # Supprimer install.php
 rm $final_path/install.php
+# Restaurer config.php
+ynh_restore_file $final_path/conf/config.php
 
 #=================================================
 # STORE THE CONFIG FILE CHECKSUM
@@ -155,7 +157,7 @@ rm $final_path/install.php
 
 ### Verify the checksum of a file, stored by `ynh_store_file_checksum` in the install script.
 ### And create a backup of this file if the checksum is different. So the file will be backed up if the admin had modified it.
-ynh_backup_if_checksum_is_different --file="$final_path/CONFIG_FILE"
+#ynh_backup_if_checksum_is_different --file="$final_path/CONFIG_FILE"
 # Recalculate and store the checksum of the file for the next upgrade.
 #ynh_store_file_checksum --file="$final_path/CONFIG_FILE"
 
@@ -183,7 +185,7 @@ ynh_script_progression --message="Upgrading systemd configuration..." --time --w
 ynh_script_progression --message="Reconfiguring fail2ban..." --time --weight=1
 
 # Create a dedicated fail2ban config
-ynh_add_fail2ban_config --logpath="/var/log/nginx/${domain}-error.log" --failregex="Regex to match into the log for a failed login"
+#ynh_add_fail2ban_config --logpath="/var/log/nginx/${domain}-error.log" --failregex="Regex to match into the log for a failed login"
 
 #=================================================
 # SECURE FILES AND DIRECTORIES
@@ -209,7 +211,7 @@ fi
 #=================================================
 ynh_script_progression --message="Starting a systemd service..." --time --weight=1
 
-ynh_systemd_action --service_name=$app --action="start" --log_path="/var/log/$app/$app.log"
+#ynh_systemd_action --service_name=$app --action="start" --log_path="/var/log/$app/$app.log"
 
 #=================================================
 # RELOAD NGINX
