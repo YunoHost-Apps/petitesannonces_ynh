@@ -149,7 +149,15 @@ ynh_add_fpm_config
 # Supprimer install.php
 rm $final_path/install.php
 # Restaurer config.php
-ynh_restore_file $final_path/conf/config.php
+# ynh_restore_file $final_path/conf/config.php # pas autorisé dans upgrade
+
+# autre piste
+db_user=$db_name
+db_pwd=$(ynh_app_setting_get --app=$app --key=mysqlpwd)
+ynh_replace_string --match_string="votre_nom_de_bdd" --replace_string=$db_name --target_file="$final_path/conf/config.php"
+ynh_replace_string --match_string="votre_utilisateur_de_bdd" --replace_string=$db_user --target_file="$final_path/conf/config.php"
+ynh_replace_string --match_string="votre_mdp_de_bdd" --replace_string=$db_pwd --target_file="$final_path/conf/config.php"
+
 
 #=================================================
 # STORE THE CONFIG FILE CHECKSUM
