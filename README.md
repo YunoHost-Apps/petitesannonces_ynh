@@ -31,7 +31,7 @@ How to configure this app: by an admin panel, a plain file with SSH, or any othe
 
 ## Documentation
 
- * Official documentation: https://framagit.org/toitoinebzh/petitesannonces  
+ * Official documentation: https://framagit.org/anto1ne/petitesannonces  
  * YunoHost documentation: If specific documentation is needed, feel free to contribute.
 
 ## YunoHost specific features
@@ -60,8 +60,8 @@ https://yunohost.org/packaging_apps
 ## Links
 
  * Report a bug: https://github.com/YunoHost-Apps/petitesannonces_ynh/issues
- * App website: https://framagit.org/toitoinebzh/petitesannonces  
- * Upstream app repository: https://framagit.org/toitoinebzh/petitesannonces  
+ * App website: https://framagit.org/anto1ne/petitesannonces  
+ * Upstream app repository: https://framagit.org/anto1ne/petitesannonces  
  * YunoHost website: https://yunohost.org/
 
 ---
