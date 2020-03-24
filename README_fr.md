@@ -19,7 +19,7 @@ Les fonctionnalités de cette outils sont :
   * Possibilité d'envoyer un message à celui qui a déposé l'annonce  
 
 
-**Version incluse:**  0.1.0
+**Version incluse:**  0.1.0-ynh1
 
 ## Captures d'écran
 
@@ -39,7 +39,7 @@ Comment configurer cette application: via le panneau d'administration, un fichie
 
 ## Documentation
 
- * Documentation officielle: https://framagit.org/toitoinebzh/petitesannonces  
+ * Documentation officielle: https://framagit.org/anto1ne/petitesannonces  
  * Documentation YunoHost: Si une documentation spécifique est nécessaire, n'hésitez pas à contribuer.
 
 ## Caractéristiques spécifiques YunoHost
@@ -69,8 +69,8 @@ https://yunohost.org/packaging_apps
 ## Liens
 
  * Signaler un bug: https://github.com/YunoHost-Apps/petitesannonces_ynh/issues
- * Site de l'application: https://framagit.org/toitoinebzh/petitesannonces
- * Dépôt de l'application principale: https://framagit.org/toitoinebzh/petitesannonces
+ * Site de l'application: https://framagit.org/anto1ne/petitesannonces
+ * Dépôt de l'application principale: https://framagit.org/anto1ne/petitesannonces
  * Site web YunoHost: https://yunohost.org/
 
 ---
