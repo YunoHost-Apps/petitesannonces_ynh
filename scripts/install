@@ -231,7 +231,12 @@ ynh_systemd_action --service_name=nginx --action=reload
 # Installation with curl
 ynh_script_progression --message="Finalizing installation..." --time --weight=1
 #ynh_local_curl "/INSTALL_PATH" "key1=value1" "key2=value2" "key3=value3"
-#ynh_local_curl "/install.php"
+
+ynh_replace_string --match_string="votre_nom_de_bdd" --replace_string=$db_name --target_file="$final_path/conf/config.php"
+ynh_replace_string --match_string="votre_utilisateur_de_bdd" --replace_string=$db_user --target_file="$final_path/conf/config.php"
+ynh_replace_string --match_string="votre_mdp_de_bdd" --replace_string=$db_pwd --target_file="$final_path/conf/config.php"
+
+ynh_local_curl "/install.php"
 
 # Remove the public access
 if [ $is_public -eq 0 ]
@@ -247,11 +252,6 @@ fi
 ### (It's compatible with sed regular expressions syntax)
 
 #ynh_replace_string --match_string="match_string" --replace_string="replace_string" --target_file="$final_path/CONFIG_FILE"
-ynh_replace_string --match_string="votre_nom_de_bdd" --replace_string=$db_name --target_file="$final_path/conf/config.php"
-ynh_replace_string --match_string="votre_utilisateur_de_bdd" --replace_string=$db_user --target_file="$final_path/conf/config.php"
-ynh_replace_string --match_string="votre_mdp_de_bdd" --replace_string=$db_pwd --target_file="$final_path/conf/config.php"
-
-ynh_local_curl "/install.php"
 
 #=================================================
 # STORE THE CONFIG FILE CHECKSUM
@@ -309,17 +309,26 @@ ynh_script_progression --message="Configuring log rotation..." --time --weight=1
 ### If you're not using these lines:
 ###		- You can remove these files in conf/.
 ###		- Remove the section "REMOVE SERVICE FROM ADMIN PANEL" in the remove script
-###		- As well as the section "ADVERTISE SERVICE IN ADMIN PANEL" in the restore script
+###		- As well as the section "INTEGRATE SERVICE IN YUNOHOST" in the restore script
 
 #yunohost service add $app --description "A short description of the app" --log "/var/log/$app/$app.log"
 
-### With YunoHost 3.8 you will then be able to: 
-### - specify a list of ports that needs to be publicly exposed (c.f. --needs_exposed_ports) 
-###   which will then be checked by YunoHost's diagnosis system
-### - specify a custom command to check the status of the service (c.f. --test_status)
-###   though it's only needed for weird cases where 'systemctl status' doesn't do a good job
-### - specify a custom command to check / validate the configuration of the service (c.f. --test_conf)
-###   for example, the command to check the configuration of nginx is "nginx -t"
+### Additional options starting with 3.8:
+###
+### --needs_exposed_ports "$port" a list of ports that needs to be publicly exposed
+###                               which will then be checked by YunoHost's diagnosis system
+###                               (N.B. DO NOT USE THIS is the port is only internal !!!)
+###
+### --test_status "some command"  a custom command to check the status of the service
+###                               (only relevant if 'systemctl status' doesn't do a good job)
+###
+### --test_conf "some command"    some command similar to "nginx -t" that validates the conf of the service
+###
+### Re-calling 'yunohost service add' during the upgrade script is the right way
+### to proceed if you later realize that you need to enable some flags that
+### weren't enabled on old installs (be careful it'll override the existing
+### service though so you should re-provide all relevant flags when doing so)
+###
 
 #=================================================
 # START SYSTEMD SERVICE
