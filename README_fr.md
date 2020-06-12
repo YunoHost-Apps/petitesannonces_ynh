@@ -19,7 +19,7 @@ Les fonctionnalités de cette outils sont :
   * Possibilité d'envoyer un message à celui qui a déposé l'annonce  
 
 
-**Version incluse:**  0.1.0-ynh1
+**Version incluse:**  0.1.0~ynh2
 
 ## Captures d'écran
 
@@ -29,8 +29,7 @@ Les fonctionnalités de cette outils sont :
 ## Démo
 
 * [Démo officielle](Lien vers un site de démonstration de cette application) 
-
-
+-->
 ## Configuration
 
 Comment configurer cette application: via le panneau d'administration, un fichier brut en SSH ou tout autre moyen.
