@@ -97,7 +97,7 @@ ynh_remove_logrotate
 
 if yunohost firewall list | grep -q "\- $port$"
 then
-	ynh_script_progression --message="Closing port $port..."
+	ynh_script_progression --message="Closing port $port..." --time --weight=1
 	ynh_exec_warn_less yunohost firewall disallow TCP $port
 fi
 
@@ -112,7 +112,7 @@ ynh_script_progression --message="Removing fail2ban configuration..." --time --w
 #=================================================
 # SPECIFIC REMOVE
 #=================================================
-# REMOVE THE CRON FILE
+# REMOVE VARIOUS FILES
 #=================================================
 
 # Remove a cron file

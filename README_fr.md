@@ -1,12 +1,17 @@
 # PetitesAnnonces pour YunoHost
 
-[![Niveau d'intégration](https://dash.yunohost.org/integration/petitesannonces.svg)](https://dash.yunohost.org/appci/app/petitesannonces)  
+[
+![](https://dash.yunohost.org/integration/petitesannonces.svg)
+![](https://ci-apps.yunohost.org/ci/badges/petitesannonces.status.svg)
+![](https://ci-apps.yunohost.org/ci/badges/petitesannonces.maintain.svg)
+](https://dash.yunohost.org/appci/app/petitesannonces)
+
 [![Installer petitesannonces avec YunoHost](https://install-app.yunohost.org/install-with-yunohost.png)](https://install-app.yunohost.org/?app=petitesannonces)
 
 *[Read this readme in english.](./README.md)* 
 
 > *Ce package vous permet d'installer PetitesAnnonces rapidement et simplement sur un serveur Yunohost.  
-Si vous n'avez pas YunoHost, regardez [ici](https://yunohost.org/#/install) pour savoir comment l'installer et en profiter.*
+Si vous n'avez pas YunoHost, consultez [le guide](https://yunohost.org/#/install) pour savoir comment l'installer et en profiter.*
 
 ## Vue d'ensemble
 
@@ -19,7 +24,7 @@ Les fonctionnalités de cette outils sont :
   * Possibilité d'envoyer un message à celui qui a déposé l'annonce  
 
 
-**Version incluse:**  0.1.0-ynh1
+**Version incluse:**  0.1.0~ynh2
 
 ## Captures d'écran
 
@@ -28,14 +33,11 @@ Les fonctionnalités de cette outils sont :
 <!-- 
 ## Démo
 
-* [Démo officielle](Lien vers un site de démonstration pour cette application) 
-
-
+* [Démo officielle](Lien vers un site de démonstration de cette application) 
+-->
 ## Configuration
 
 Comment configurer cette application: via le panneau d'administration, un fichier brut en SSH ou tout autre moyen.
-
--->
 
 ## Documentation
 
@@ -44,7 +46,7 @@ Comment configurer cette application: via le panneau d'administration, un fichie
 
 ## Caractéristiques spécifiques YunoHost
 
-#### Support multi-utilisateurs
+#### Support multi-utilisateur
 
 L'authentification LDAP et HTTP est-elle prise en charge? : Non   
 L'application peut-elle être utilisée par plusieurs utilisateurs?  : Non  
@@ -53,7 +55,6 @@ L'application peut-elle être utilisée par plusieurs utilisateurs?  : Non
 
 * x86-64b - [![Build Status](https://ci-apps.yunohost.org/ci/logs/petitesannonces%20%28Apps%29.svg)](https://ci-apps.yunohost.org/ci/apps/petitesannonces/)
 * ARMv8-A - [![Build Status](https://ci-apps-arm.yunohost.org/ci/logs/petitesannonces%20%28Apps%29.svg)](https://ci-apps-arm.yunohost.org/ci/apps/petitesannonces/)
-* Jessie x86-64b - [![Build Status](https://ci-stretch.nohost.me/ci/logs/petitesannonces%20%28Apps%29.svg)](https://ci-stretch.nohost.me/ci/apps/petitesannonces/)
 
 ## Limitations
 
@@ -61,7 +62,7 @@ L'application peut-elle être utilisée par plusieurs utilisateurs?  : Non
 
 ## Informations additionnelles
 
-* Autres informations à ajouter sur cette application : RAS
+* Autres informations que vous souhaitez ajouter sur cette application : RAS
 
 **Plus d'informations sur la page de documentation:**  
 https://yunohost.org/packaging_apps
