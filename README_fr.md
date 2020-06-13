@@ -24,7 +24,7 @@ Les fonctionnalités de cette outils sont :
   * Possibilité d'envoyer un message à celui qui a déposé l'annonce  
 
 
-**Version incluse:**  0.1.0~ynh2
+**Version incluse:**  0.1.0
 
 ## Captures d'écran
 
