@@ -1,6 +1,11 @@
 # PetitesAnnonces for YunoHost
 
-[![Integration level](https://dash.yunohost.org/integration/petitesannonces.svg)](https://dash.yunohost.org/appci/app/petitesannonces)  
+[
+![](https://dash.yunohost.org/integration/petitesannonces.svg)
+![](https://ci-apps.yunohost.org/ci/badges/petitesannonces.status.svg)
+![](https://ci-apps.yunohost.org/ci/badges/petitesannonces.maintain.svg)
+](https://dash.yunohost.org/appci/app/petitesannonces)
+
 [![Install petitesannonces with YunoHost](https://install-app.yunohost.org/install-with-yunohost.png)](https://install-app.yunohost.org/?app=petitesannonces)
 
 *[Lire ce readme en français.](./README_fr.md)*
