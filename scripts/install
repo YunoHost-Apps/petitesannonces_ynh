@@ -72,7 +72,6 @@ ynh_script_progression --message="Storing installation settings..." --time --wei
 ynh_app_setting_set --app=$app --key=domain --value=$domain
 #ynh_app_setting_set --app=$app --key=path --value=$path_url
 #ynh_app_setting_set --app=$app --key=admin --value=$admin
-ynh_app_setting_set --app=$app --key=is_public --value=$is_public
 #ynh_app_setting_set --app=$app --key=language --value=$language
 
 #=================================================
@@ -221,7 +220,7 @@ chown -R $app: $final_path
 
 # Set the app as temporarily public for curl call
 ynh_script_progression --message="Configuring SSOwat..." --time --weight=1
-ynh_app_setting_set --app=$app --key=skipped_uris --value="/"
+
 # Reload SSOwat config
 yunohost app ssowatconf
 
@@ -239,9 +238,11 @@ ynh_replace_string --match_string="votre_mdp_de_bdd" --replace_string=$db_pwd --
 ynh_local_curl "/install.php"
 
 # Remove the public access
-if [ $is_public -eq 0 ]
+
+# Make app public if necessary
+if [ "$is_public" -eq 1 ]
 then
-	ynh_app_setting_delete --app=$app --key=skipped_uris
+	ynh_permission_update --permission="main" --add="visitors"
 fi
 
 #=================================================
@@ -359,11 +360,12 @@ ynh_script_progression --message="Configuring fail2ban..." --time --weight=1
 #=================================================
 ynh_script_progression --message="Configuring SSOwat..." --time --weight=1
 
+
+
 # Make app public if necessary
-if [ $is_public -eq 1 ]
+if [ "$is_public" -eq 1 ]
 then
-	# unprotected_uris allows SSO credentials to be passed anyway.
-	ynh_app_setting_set --app=$app --key=unprotected_uris --value="/"
+	ynh_permission_update --permission="main" --add="visitors"
 fi
 
 #=================================================
