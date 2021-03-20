@@ -29,7 +29,7 @@ about: Create a report to help us debug, it would be nice to fill the template a
 *Steps to reproduce the behavior.*
 - *If you performed a command from the CLI, the command itself is enough. For example:*
     ```sh
-    sudo yunohost app install PetitesAnnonces
+    sudo yunohost app install petitesannonces
     ```
 - *If you used the webadmin, please perform the equivalent command from the CLI first.*
 - *If the error occurs in your browser, explain what you did:*

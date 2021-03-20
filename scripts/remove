@@ -17,7 +17,6 @@ ynh_script_progression --message="Loading installation settings..." --time --wei
 app=$YNH_APP_INSTANCE_NAME
 
 domain=$(ynh_app_setting_get --app=$app --key=domain)
-#port=$(ynh_app_setting_get --app=$app --key=port)
 db_name=$(ynh_app_setting_get --app=$app --key=db_name)
 db_user=$db_name
 final_path=$(ynh_app_setting_get --app=$app --key=final_path)
@@ -36,28 +35,12 @@ then
 fi
 
 #=================================================
-# STOP AND REMOVE SERVICE
-#=================================================
-ynh_script_progression --message="Stopping and removing the systemd service..." --time --weight=1
-
-# Remove the dedicated systemd config
-#ynh_remove_systemd_config
-
-#=================================================
 # REMOVE THE MYSQL DATABASE
 #=================================================
 ynh_script_progression --message="Removing the MySQL database..." --time --weight=1
 
 # Remove a database if it exists, along with the associated user
 ynh_mysql_remove_db --db_user=$db_user --db_name=$db_name
-
-#=================================================
-# REMOVE DEPENDENCIES
-#=================================================
-ynh_script_progression --message="Removing dependencies..." --time --weight=1
-
-# Remove metapackage and its dependencies
-#ynh_remove_app_dependencies
 
 #=================================================
 # REMOVE APP MAIN DIR
@@ -100,29 +83,6 @@ then
 	ynh_script_progression --message="Closing port $port..." --time --weight=1
 	ynh_exec_warn_less yunohost firewall disallow TCP $port
 fi
-
-#=================================================
-# REMOVE FAIL2BAN CONFIGURATION
-#=================================================
-ynh_script_progression --message="Removing fail2ban configuration..." --time --weight=1
-
-# Remove the dedicated fail2ban config
-#ynh_remove_fail2ban_config
-
-#=================================================
-# SPECIFIC REMOVE
-#=================================================
-# REMOVE VARIOUS FILES
-#=================================================
-
-# Remove a cron file
-#ynh_secure_remove --file="/etc/cron.d/$app"
-
-# Remove a directory securely
-#ynh_secure_remove --file="/etc/$app/"
-
-# Remove the log files
-#ynh_secure_remove --file="/var/log/$app/"
 
 #=================================================
 # GENERIC FINALIZATION

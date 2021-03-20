@@ -4,8 +4,7 @@
 ![](https://dash.yunohost.org/integration/petitesannonces.svg)
 ![](https://ci-apps.yunohost.org/ci/badges/petitesannonces.status.svg)
 ![](https://ci-apps.yunohost.org/ci/badges/petitesannonces.maintain.svg)
-](https://dash.yunohost.org/appci/app/petitesannonces)
-
+](https://dash.yunohost.org/appci/app/petitesannonces)  
 [![Installer petitesannonces avec YunoHost](https://install-app.yunohost.org/install-with-yunohost.png)](https://install-app.yunohost.org/?app=petitesannonces)
 
 *[Read this readme in english.](./README.md)* 
@@ -64,9 +63,6 @@ L'application peut-elle être utilisée par plusieurs utilisateurs?  : Non
 
 * Autres informations que vous souhaitez ajouter sur cette application : RAS
 
-**Plus d'informations sur la page de documentation:**  
-https://yunohost.org/packaging_apps
-
 ## Liens
 
  * Signaler un bug: https://github.com/YunoHost-Apps/petitesannonces_ynh/issues
@@ -76,10 +72,8 @@ https://yunohost.org/packaging_apps
 
 ---
 
-Informations pour les développeurs
-----------------
+## Informations pour les développeurs
 
-**Seulement si vous voulez utiliser une branche de test pour le codage, au lieu de fusionner directement dans la banche principale.**
 Merci de faire vos pull request sur la [branche testing](https://github.com/YunoHost-Apps/petitesannonces_ynh/tree/testing).
 
 Pour essayer la branche testing, procédez comme suit.
