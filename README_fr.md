@@ -1,76 +1,32 @@
 # PetitesAnnonces pour YunoHost
 
-[
-![](https://dash.yunohost.org/integration/petitesannonces.svg)
-![](https://ci-apps.yunohost.org/ci/badges/petitesannonces.status.svg)
-![](https://ci-apps.yunohost.org/ci/badges/petitesannonces.maintain.svg)
-](https://dash.yunohost.org/appci/app/petitesannonces)  
-[![Installer petitesannonces avec YunoHost](https://install-app.yunohost.org/install-with-yunohost.png)](https://install-app.yunohost.org/?app=petitesannonces)
+[![Niveau d'intégration](https://dash.yunohost.org/integration/petitesannonces.svg)](https://dash.yunohost.org/appci/app/petitesannonces) ![](https://ci-apps.yunohost.org/ci/badges/petitesannonces.status.svg) ![](https://ci-apps.yunohost.org/ci/badges/petitesannonces.maintain.svg)  
+[![Installer PetitesAnnonces avec YunoHost](https://install-app.yunohost.org/install-with-yunohost.svg)](https://install-app.yunohost.org/?app=petitesannonces)
 
-*[Read this readme in english.](./README.md)* 
+*[Read this readme in english.](./README.md)*
+*[Lire ce readme en français.](./README_fr.md)*
 
-> *Ce package vous permet d'installer PetitesAnnonces rapidement et simplement sur un serveur Yunohost.  
-Si vous n'avez pas YunoHost, consultez [le guide](https://yunohost.org/#/install) pour savoir comment l'installer et en profiter.*
+> *Ce package vous permet d'installer PetitesAnnonces rapidement et simplement sur un serveur YunoHost.
+Si vous n'avez pas YunoHost, regardez [ici](https://yunohost.org/#/install) pour savoir comment l'installer et en profiter.*
 
 ## Vue d'ensemble
 
-Grâce à cet outil, créer simplement et rapidement votre site de Petites Annonces.
+Créer simplement et rapidement votre site de Petites Annonces
 
-Les fonctionnalités de cette outils sont :  
-  * Affichage des annonces mises en ligne  
-  * Tri selon la région, la catégorie et mot-clés  
-  * Ajout/suppression d'annonces  
-  * Possibilité d'envoyer un message à celui qui a déposé l'annonce  
+**Version incluse :** 0.1.0~ynh3
 
-
-**Version incluse:**  0.1.0
+**Démo :** https://demo.example.com
 
 ## Captures d'écran
 
-![demo](doc/demo.png)
+![](./doc/screenshots/demo.png)
 
-<!-- 
-## Démo
+## Documentations et ressources
 
-* [Démo officielle](Lien vers un site de démonstration de cette application) 
--->
-## Configuration
-
-Comment configurer cette application: via le panneau d'administration, un fichier brut en SSH ou tout autre moyen.
-
-## Documentation
-
- * Documentation officielle: https://framagit.org/anto1ne/petitesannonces  
- * Documentation YunoHost: Si une documentation spécifique est nécessaire, n'hésitez pas à contribuer.
-
-## Caractéristiques spécifiques YunoHost
-
-#### Support multi-utilisateur
-
-L'authentification LDAP et HTTP est-elle prise en charge? : Non   
-L'application peut-elle être utilisée par plusieurs utilisateurs?  : Non  
-
-#### Architectures supportées
-
-* x86-64b - [![Build Status](https://ci-apps.yunohost.org/ci/logs/petitesannonces%20%28Apps%29.svg)](https://ci-apps.yunohost.org/ci/apps/petitesannonces/)
-* ARMv8-A - [![Build Status](https://ci-apps-arm.yunohost.org/ci/logs/petitesannonces%20%28Apps%29.svg)](https://ci-apps-arm.yunohost.org/ci/apps/petitesannonces/)
-
-## Limitations
-
-* Limitations connues : jeune application en cours de développement.
-
-## Informations additionnelles
-
-* Autres informations que vous souhaitez ajouter sur cette application : RAS
-
-## Liens
-
- * Signaler un bug: https://github.com/YunoHost-Apps/petitesannonces_ynh/issues
- * Site de l'application: https://framagit.org/anto1ne/petitesannonces
- * Dépôt de l'application principale: https://framagit.org/anto1ne/petitesannonces
- * Site web YunoHost: https://yunohost.org/
-
----
+* Site officiel de l'app : https://framagit.org/toitoinebzh/petitesannonces
+* Dépôt de code officiel de l'app : https://framagit.org/toitoinebzh/petitesannonces
+* Documentation YunoHost pour cette app : https://yunohost.org/app_petitesannonces
+* Signaler un bug : https://github.com/YunoHost-Apps/petitesannonces_ynh/issues
 
 ## Informations pour les développeurs
 
@@ -82,3 +38,5 @@ sudo yunohost app install https://github.com/YunoHost-Apps/petitesannonces_ynh/t
 ou
 sudo yunohost app upgrade petitesannonces -u https://github.com/YunoHost-Apps/petitesannonces_ynh/tree/testing --debug
 ```
+
+**Plus d'infos sur le packaging d'applications :** https://yunohost.org/packaging_apps
