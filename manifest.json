@@ -3,18 +3,24 @@
     "id": "petitesannonces",
     "packaging_format": 1,
     "description": {
-        "en": "Make your own classified advertising website easily.",
-        "fr": "Grâce à cet outil, créer simplement et rapidement votre site de Petites Annonces."
+        "en": "Make your own classified advertising website easily",
+        "fr": "Créer simplement et rapidement votre site de Petites Annonces"
     },
     "version": "0.1.0~ynh3",
     "url": "https://framagit.org/toitoinebzh/petitesannonces",
+    "upstream": {
+        "license": "AGPL-3.0-or-later",
+        "website": "https://framagit.org/toitoinebzh/petitesannonces",
+        "demo": "https://demo.example.com",
+        "code": "https://framagit.org/toitoinebzh/petitesannonces"
+    },
     "license": "AGPL-3.0-or-later",
     "maintainer": {
         "name": "Antoine",
         "email": "antoine@miaou.org"
     },
     "requirements": {
-        "yunohost": ">= 4.1.7"
+        "yunohost": ">= 4.2.4"
     },
     "multi_instance": true,
     "services": [

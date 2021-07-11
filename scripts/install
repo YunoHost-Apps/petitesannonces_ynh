@@ -44,14 +44,14 @@ ynh_webpath_register --app=$app --domain=$domain --path_url=$path_url
 #=================================================
 # STORE SETTINGS FROM MANIFEST
 #=================================================
-ynh_script_progression --message="Storing installation settings..." --time --weight=1
+ynh_script_progression --message="Storing installation settings..." --weight=1
 
 ynh_app_setting_set --app=$app --key=domain --value=$domain
 
 #=================================================
 # CREATE A MYSQL DATABASE
 #=================================================
-ynh_script_progression --message="Creating a MySQL database..." --time --weight=1
+ynh_script_progression --message="Creating a MySQL database..." --weight=1
 
 db_name=$(ynh_sanitize_dbid --db_name=$app)
 db_user=$db_name
@@ -59,9 +59,17 @@ ynh_app_setting_set --app=$app --key=db_name --value=$db_name
 ynh_mysql_setup_db --db_user=$db_user --db_name=$db_name
 
 #=================================================
+# CREATE DEDICATED USER
+#=================================================
+ynh_script_progression --message="Configuring system user..." --time --weight=1
+
+# Create a system user
+ynh_system_user_create --username=$app --home_dir="$final_path"
+
+#=================================================
 # DOWNLOAD, CHECK AND UNPACK SOURCE
 #=================================================
-ynh_script_progression --message="Setting up source files..." --time --weight=1
+ynh_script_progression --message="Setting up source files..." --weight=1
 
 ynh_app_setting_set --app=$app --key=final_path --value=$final_path
 # Download, check integrity, uncompress and patch the source from app.src
@@ -70,23 +78,15 @@ ynh_setup_source --dest_dir="$final_path"
 #=================================================
 # NGINX CONFIGURATION
 #=================================================
-ynh_script_progression --message="Configuring nginx web server..." --time --weight=1
+ynh_script_progression --message="Configuring nginx web server..." --weight=1
 
 # Create a dedicated nginx config
 ynh_add_nginx_config
 
 #=================================================
-# CREATE DEDICATED USER
-#=================================================
-ynh_script_progression --message="Configuring system user..." --time --weight=1
-
-# Create a system user
-ynh_system_user_create --username=$app
-
-#=================================================
 # PHP-FPM CONFIGURATION
 #=================================================
-ynh_script_progression --message="Configuring php-fpm..." --time --weight=1
+ynh_script_progression --message="Configuring php-fpm..." --weight=1
 
 # Create a dedicated php-fpm config
 ynh_add_fpm_config
@@ -98,17 +98,13 @@ ynh_add_fpm_config
 # Set right permissions for curl install
 chown -R $app: $final_path
 
-# Set the app as temporarily public for curl call
-ynh_script_progression --message="Configuring SSOwat..." --time --weight=1
-
 ynh_permission_update --permission="main" --add="visitors"
 
 # Reload Nginx
 ynh_systemd_action --service_name=nginx --action=reload
 
 # Installation with curl
-ynh_script_progression --message="Finalizing installation..." --time --weight=1
-#ynh_local_curl "/INSTALL_PATH" "key1=value1" "key2=value2" "key3=value3"
+ynh_script_progression --message="Finalizing installation..." --weight=1
 
 ynh_replace_string --match_string="votre_nom_de_bdd" --replace_string=$db_name --target_file="$final_path/conf/config.php"
 ynh_replace_string --match_string="votre_utilisateur_de_bdd" --replace_string=$db_user --target_file="$final_path/conf/config.php"
@@ -116,12 +112,8 @@ ynh_replace_string --match_string="votre_mdp_de_bdd" --replace_string=$db_pwd --
 
 ynh_local_curl "/install.php"
 
-#=================================================
-# GENERIC FINALIZATION
-#=================================================
-
 # Supprimer install.php
-rm $final_path/install.php
+ynh_secure_remove --file=$final_path/install.php
 
 #=================================================
 # SECURE FILES AND DIRECTORIES
@@ -134,7 +126,7 @@ chown -R $app:$app $final_path/uploads
 #=================================================
 # SETUP SSOWAT
 #=================================================
-ynh_script_progression --message="Configuring permissions..." --time --weight=1
+ynh_script_progression --message="Configuring permissions..." --weight=1
 
 # Make app public if necessary
 if [ $is_public -eq 0 ]
@@ -145,7 +137,7 @@ fi
 #=================================================
 # RELOAD NGINX
 #=================================================
-ynh_script_progression --message="Reloading nginx web server..." --time --weight=1
+ynh_script_progression --message="Reloading nginx web server..." --weight=1
 
 ynh_systemd_action --service_name=nginx --action=reload
 
@@ -153,4 +145,4 @@ ynh_systemd_action --service_name=nginx --action=reload
 # END OF SCRIPT
 #=================================================
 
-ynh_script_progression --message="Installation of $app completed" --time --last
+ynh_script_progression --message="Installation of $app completed" --last
