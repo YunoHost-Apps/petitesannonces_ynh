@@ -6,7 +6,7 @@
         "en": "Make your own classified advertising website easily",
         "fr": "Créer simplement et rapidement votre site de Petites Annonces"
     },
-    "version": "0.1.0~ynh4",
+    "version": "0.1.0~ynh2",
     "url": "https://framagit.org/toitoinebzh/petitesannonces",
     "upstream": {
         "license": "AGPL-3.0-or-later",
