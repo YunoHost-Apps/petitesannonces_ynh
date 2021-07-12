@@ -19,7 +19,7 @@ Make your own classified advertising website easily
 
 **Shipped version:** 0.1.0~ynh2
 
-**Demo:** https://demo.example.com
+
 
 ## Screenshots
 

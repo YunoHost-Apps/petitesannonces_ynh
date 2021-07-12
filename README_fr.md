@@ -15,7 +15,7 @@ Créer simplement et rapidement votre site de Petites Annonces
 
 **Version incluse :** 0.1.0~ynh2
 
-**Démo :** https://demo.example.com
+
 
 ## Captures d'écran
 
