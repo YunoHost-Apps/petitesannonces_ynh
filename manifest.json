@@ -19,20 +19,19 @@
         "email": "antoine@miaou.org"
     },
     "requirements": {
-        "yunohost": ">= 4.2.4"
+        "yunohost": ">= 4.3.0"
     },
     "multi_instance": true,
     "services": [
         "nginx",
-        "php7.3-fpm",
+        "php7.4-fpm",
         "mysql"
     ],
     "arguments": {
         "install" : [
             {
                 "name": "domain",
-                "type": "domain",
-                "example": "example.com"
+                "type": "domain"
             },
             {
                 "name": "path",

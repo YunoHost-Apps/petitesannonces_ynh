@@ -80,6 +80,14 @@ chmod -R o-rwx "$final_path"
 chown -R $app:www-data "$final_path"
 
 #=================================================
+# PHP-FPM CONFIGURATION
+#=================================================
+ynh_script_progression --message="Configuring PHP-FPM..." --weight=1
+
+# Create a dedicated php-fpm config
+ynh_add_fpm_config
+
+#=================================================
 # NGINX CONFIGURATION
 #=================================================
 ynh_script_progression --message="Configuring NGINX web server..." --weight=1
@@ -88,12 +96,14 @@ ynh_script_progression --message="Configuring NGINX web server..." --weight=1
 ynh_add_nginx_config
 
 #=================================================
-# PHP-FPM CONFIGURATION
+# ADD A CONFIGURATION
 #=================================================
-ynh_script_progression --message="Configuring PHP-FPM..." --weight=1
+ynh_script_progression --message="Adding a configuration file..." --weight=1
 
-# Create a dedicated php-fpm config
-ynh_add_fpm_config
+ynh_add_config --template="../conf/config.php" --destination="$final_path/conf/config.php"
+
+chmod 400 "$final_path/conf/config.php"
+chown $app:$app "$final_path/conf/config.php"
 
 #=================================================
 # SETUP APPLICATION WITH CURL
@@ -107,10 +117,6 @@ ynh_systemd_action --service_name=nginx --action=reload
 # Installation with curl
 ynh_script_progression --message="Finalizing installation..." --weight=1
 
-ynh_replace_string --match_string="votre_nom_de_bdd" --replace_string=$db_name --target_file="$final_path/conf/config.php"
-ynh_replace_string --match_string="votre_utilisateur_de_bdd" --replace_string=$db_user --target_file="$final_path/conf/config.php"
-ynh_replace_string --match_string="votre_mdp_de_bdd" --replace_string=$db_pwd --target_file="$final_path/conf/config.php"
-
 ynh_local_curl "/install.php"
 
 # Supprimer install.php
@@ -122,9 +128,11 @@ ynh_secure_remove --file=$final_path/install.php
 ynh_script_progression --message="Configuring permissions..." --weight=1
 
 # Make app public if necessary
-if [ $is_public -eq 0 ]
+if [ $is_public -eq 1 ]
 then
-	ynh_permission_update --permission="main" --remove="visitors"
+	# Everyone can access the app.
+	# The "main" permission is automatically created before the install script.
+	ynh_permission_update --permission="main" --add="visitors"
 fi
 
 #=================================================
