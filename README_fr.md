@@ -17,8 +17,7 @@ Si vous n'avez pas YunoHost, regardez [ici](https://yunohost.org/#/install) pour
 
 Créer simplement et rapidement votre site de Petites Annonces
 
-**Version incluse :** 0.1.0~ynh2
-
+**Version incluse :** 0.1.0~ynh2
 
 ## Captures d'écran
 

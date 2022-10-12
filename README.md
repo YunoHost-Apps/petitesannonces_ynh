@@ -19,7 +19,6 @@ Make your own classified advertising website easily
 
 **Shipped version:** 0.1.0~ynh2
 
-
 ## Screenshots
 
 ![Screenshot of PetitesAnnonces](./doc/screenshots/demo.png)
