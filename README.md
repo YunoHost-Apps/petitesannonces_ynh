@@ -5,7 +5,8 @@ It shall NOT be edited by hand.
 
 # PetitesAnnonces for YunoHost
 
-[![Integration level](https://dash.yunohost.org/integration/petitesannonces.svg)](https://dash.yunohost.org/appci/app/petitesannonces) ![Working status](https://ci-apps.yunohost.org/ci/badges/petitesannonces.status.svg) ![Maintenance status](https://ci-apps.yunohost.org/ci/badges/petitesannonces.maintain.svg)  
+[![Integration level](https://dash.yunohost.org/integration/petitesannonces.svg)](https://dash.yunohost.org/appci/app/petitesannonces) ![Working status](https://ci-apps.yunohost.org/ci/badges/petitesannonces.status.svg) ![Maintenance status](https://ci-apps.yunohost.org/ci/badges/petitesannonces.maintain.svg)
+
 [![Install PetitesAnnonces with YunoHost](https://install-app.yunohost.org/install-with-yunohost.svg)](https://install-app.yunohost.org/?app=petitesannonces)
 
 *[Lire ce readme en français.](./README_fr.md)*
@@ -27,7 +28,7 @@ Make your own classified advertising website easily
 
 * Official app website: <https://framagit.org/toitoinebzh/petitesannonces>
 * Upstream app code repository: <https://framagit.org/toitoinebzh/petitesannonces>
-* YunoHost documentation for this app: <https://yunohost.org/app_petitesannonces>
+* YunoHost Store: <https://apps.yunohost.org/app/petitesannonces>
 * Report a bug: <https://github.com/YunoHost-Apps/petitesannonces_ynh/issues>
 
 ## Developer info
