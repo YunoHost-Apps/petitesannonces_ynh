@@ -18,7 +18,7 @@ If you don't have YunoHost, please consult [the guide](https://yunohost.org/#/in
 
 Make your own classified advertising website easily.
 
-**Shipped version:** 0.1.0~ynh2
+**Shipped version:** 0.1.0~ynh3
 
 ## Screenshots
 
