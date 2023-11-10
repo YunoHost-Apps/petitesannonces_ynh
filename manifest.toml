@@ -1,7 +1,7 @@
 packaging_format = 2
 
 id = "petitesannonces"
-name = "PetitesAnnonces"
+name = "Petites Annonces"
 description.en = "Make your own classified advertising website easily"
 description.fr = "Créer simplement et rapidement votre site de Petites Annonces"
 
