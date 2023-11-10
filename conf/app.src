@@ -1,6 +1,0 @@
-SOURCE_URL=https://framagit.org/anto1ne/petitesannonces/-/archive/v0.1.0/petitesannonces-v0.1.0.tar.gz
-SOURCE_SUM=78abc1bf7575b394854b3a9bd14a1a29b6ddc2ce64e33f39a7503f63faecf714
-SOURCE_SUM_PRG=sha256sum
-SOURCE_FORMAT=tar.gz
-SOURCE_IN_SUBDIR=true
-SOURCE_FILENAME=

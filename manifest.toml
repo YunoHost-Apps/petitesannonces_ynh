@@ -1,0 +1,55 @@
+packaging_format = 2
+
+id = "petitesannonces"
+name = "Petites Annonces"
+description.en = "Make your own classified advertising website easily"
+description.fr = "Créer simplement et rapidement votre site de Petites Annonces"
+
+version = "0.1.0~ynh2"
+
+maintainers = ["Antoine"]
+
+[upstream]
+license = "AGPL-3.0-or-later"
+website = "https://framagit.org/toitoinebzh/petitesannonces"
+code = "https://framagit.org/toitoinebzh/petitesannonces"
+
+[integration]
+yunohost = ">= 11.2"
+architectures = "all"
+multi_instance = true
+ldap = false
+sso = false
+disk = "50M"
+ram.build = "100M"
+ram.runtime = "50M"
+
+[install]
+    [install.domain]
+    type = "domain"
+
+    [install.path]
+    type = "path"
+    default = "/annonces"
+
+    [install.init_main_permission]
+    type = "group"
+    default = "visitors"
+
+[resources]
+        [resources.sources.main]
+        url = "https://framagit.org/anto1ne/petitesannonces/-/archive/v0.1.0/petitesannonces-v0.1.0.tar.gz"
+        sha256 = "78abc1bf7575b394854b3a9bd14a1a29b6ddc2ce64e33f39a7503f63faecf714"
+
+    [resources.system_user]
+
+    [resources.install_dir]
+
+    [resources.permissions]
+    main.url = "/"
+
+    [resources.apt]
+    packages = "mariadb-server, php7.4-fpm"
+
+    [resources.database]
+    type = "mysql"
