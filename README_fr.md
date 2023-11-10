@@ -16,7 +16,7 @@ Si vous n’avez pas YunoHost, regardez [ici](https://yunohost.org/#/install) po
 
 ## Vue d’ensemble
 
-Créer simplement et rapidement votre site de Petites Annonces
+Make your own classified advertising website easily.
 
 **Version incluse :** 0.1.0~ynh2
 
