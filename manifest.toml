@@ -40,6 +40,7 @@ ram.runtime = "50M"
         [resources.sources.main]
         url = "https://framagit.org/anto1ne/petitesannonces/-/archive/v0.1.0/petitesannonces-v0.1.0.tar.gz"
         sha256 = "78abc1bf7575b394854b3a9bd14a1a29b6ddc2ce64e33f39a7503f63faecf714"
+        autoupdate.strategy = "latest_gitlab_release"
 
     [resources.system_user]
 
