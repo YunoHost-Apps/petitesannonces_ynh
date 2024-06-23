@@ -3,7 +3,7 @@
 请勿手动编辑。
 -->
 
-# YunoHost 的 Petites Annonces
+# YunoHost 上的 Petites Annonces
 
 [![集成程度](https://dash.yunohost.org/integration/petitesannonces.svg)](https://dash.yunohost.org/appci/app/petitesannonces) ![工作状态](https://ci-apps.yunohost.org/ci/badges/petitesannonces.status.svg) ![维护状态](https://ci-apps.yunohost.org/ci/badges/petitesannonces.maintain.svg)
 
