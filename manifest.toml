@@ -41,7 +41,7 @@ ram.runtime = "50M"
     help.fr  = "Pour cela, Téléchargez le ici https://framagit.org/anto1ne/petitesannonces/-/raw/master/bdd/categories.csv?ref_type=heads&inline=false, éditez-le avec votre éditeur de texte en respectant son format (bien garder les `1;` , `2;`, etc..."
     type = "file"
     accept = [".csv"]
-    bind = "install_dir/bdd/categories.csv"
+    bind = "/etc/yunohost/apps/$app/conf/categories.csv"
     redact = true
     optional = true
 
@@ -50,7 +50,7 @@ ram.runtime = "50M"
     help.fr = "Pour cela, Téléchargez le ici https://framagit.org/anto1ne/petitesannonces/-/raw/master/bdd/regions.csv?ref_type=heads&inline=false, éditez-le avec votre éditeur de texte en respectant son format (bien garder les `1;`, `2;`, etc...)"
     type = "file"
     accept = [".csv"]
-    bind = "install_dir/bdd/regions.csv"
+    bind = "/etc/yunohost/apps/$app/conf/regions.csv"
     redact = true
     optional = true
 
