@@ -42,7 +42,6 @@ ram.runtime = "50M"
     bind = "__INSTALL_DIR__/bdd/categories.csv"
     redact = true
     optional = true
-    visible = false
 
     [install.regions]
     ask.fr = "Vous pouvez éditer un fichier .csv pour personnaliser les lieux des annonces en suivant cet exemple: [fichier origninal par défaut regions.cvs](https://framagit.org/anto1ne/petitesannonces/-/blob/master/bdd/regions.csv?ref_type=heads&plain=1). Pour cela, Téléchargez le [fichier regions.csv](https://framagit.org/anto1ne/petitesannonces/-/raw/master/bdd/regions.csv?ref_type=heads&inline=false), éditez-le avec votre éditeur de texte en respectant son format (bien garder les `1;`, `2;`, etc...)"
@@ -50,7 +49,6 @@ ram.runtime = "50M"
     bind = "__INSTALL_DIR__/bdd/regions.csv"
     redact = true
     optional = true
-    visible = false
 
 [resources]
         [resources.sources.main]
