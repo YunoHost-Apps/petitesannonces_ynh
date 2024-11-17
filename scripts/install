@@ -41,8 +41,8 @@ ynh_add_config --template="config.php" --destination="$install_dir/conf/config.p
 chmod 400 "$install_dir/conf/config.php"
 chown $app:$app "$install_dir/conf/config.php"
 
-ynh_add_config --template="categories.csv" --destination="$install_dir/bdd/categories.csv"
-ynh_add_config --template="regions.csv" --destination="$install_dir/bdd/regions.csv"
+#ynh_add_config --template="categories.csv" --destination="$install_dir/bdd/categories.csv"
+#ynh_add_config --template="regions.csv" --destination="$install_dir/bdd/regions.csv"
 
 chown $app:www-data "$install_dir/bdd/categories.csv"
 chown $app:www-data "$install_dir/bdd/regions.csv"
