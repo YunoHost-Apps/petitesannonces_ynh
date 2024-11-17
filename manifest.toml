@@ -36,6 +36,32 @@ ram.runtime = "50M"
     type = "group"
     default = "visitors"
 
+    [install.categories]
+        [main.categories.doc]
+        ask.fr = "Vous pouvez éditer un fichier .csv pour personnaliser les catégories d'annonces en suivant cet exemple: [fichier origninal par défaut categories.cvs](https://framagit.org/anto1ne/petitesannonces/-/blob/master/bdd/categories.csv?ref_type=heads&plain=1). Pour cela, Téléchargez le [fichier categories.csv](https://framagit.org/anto1ne/petitesannonces/-/raw/master/bdd/categories.csv?ref_type=heads&inline=false), éditez-le avec votre éditeur de texte en respectant son format (bien garder les `1;` , `2;`, etc...)"
+        type = "alert"
+        style = "info"
+
+        [main.categories.config_template]
+        type = "file"
+        bind = "__INSTALL_DIR__/bdd/categories.csv"
+        redact = true
+        optional = true
+        visible = false
+
+    [install.regions]
+        [main.regions.doc]
+        ask.fr = "Vous pouvez éditer un fichier .csv pour personnaliser les lieux des annonces en suivant cet exemple: [fichier origninal par défaut regions.cvs](https://framagit.org/anto1ne/petitesannonces/-/blob/master/bdd/regions.csv?ref_type=heads&plain=1). Pour cela, Téléchargez le [fichier regions.csv](https://framagit.org/anto1ne/petitesannonces/-/raw/master/bdd/regions.csv?ref_type=heads&inline=false), éditez-le avec votre éditeur de texte en respectant son format (bien garder les `1;`, `2;`, etc...)"
+        type = "alert"
+        style = "info"
+
+        [main.regions.config_template]
+        type = "file"
+        bind = "__INSTALL_DIR__/bdd/regions.csv"
+        redact = true
+        optional = true
+        visible = false
+
 [resources]
         [resources.sources.main]
         url = "https://framagit.org/anto1ne/petitesannonces/-/archive/v0.1.0/petitesannonces-v0.1.0.tar.gz"
