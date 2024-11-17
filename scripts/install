@@ -41,13 +41,13 @@ ynh_add_config --template="config.php" --destination="$install_dir/conf/config.p
 chmod 400 "$install_dir/conf/config.php"
 chown $app:$app "$install_dir/conf/config.php"
 
-if [ -z "${$categories:-}" ]; then
+if [ -z "${categories:-}" ]; then
 cp $categories "$install_dir/bdd/categories.csv"
 chmod o-rwx "$install_dir/bdd/categories.csv"
 chown $app:www-data "$install_dir/bdd/categories.csv"
 fi
 
-if [ -z "${$regions:-}" ]; then
+if [ -z "${regions:-}" ]; then
 cp $regions "$install_dir/bdd/regions.csv"
 chmod o-rwx "$install_dir/bdd/regions.csv"
 chown $app:www-data "$install_dir/bdd/regions.csv"
