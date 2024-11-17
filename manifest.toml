@@ -37,7 +37,7 @@ ram.runtime = "50M"
     default = "visitors"
 
     [install.categories]
-    ask.fr = "Vous pouvez éditer un fichier .csv pour personnaliser les catégories d'annonces en suivant cet exemple du fichier origninal par défaut categories.cvs https://framagit.org/anto1ne/petitesannonces/-/blob/master/bdd/categories.csv?ref_type=heads&plain=1. 
+    ask.fr = "Vous pouvez éditer un fichier .csv pour personnaliser les catégories d'annonces en suivant cet exemple du fichier origninal par défaut categories.cvs https://framagit.org/anto1ne/petitesannonces/-/blob/master/bdd/categories.csv?ref_type=heads&plain=1."
     help.fr  = "Pour cela, Téléchargez le ici https://framagit.org/anto1ne/petitesannonces/-/raw/master/bdd/categories.csv?ref_type=heads&inline=false, éditez-le avec votre éditeur de texte en respectant son format (bien garder les `1;` , `2;`, etc..."
     type = "file"
     bind = "__INSTALL_DIR__/bdd/categories.csv"
