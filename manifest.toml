@@ -5,7 +5,7 @@ name = "Petites Annonces"
 description.en = "Make your own classified advertising website easily"
 description.fr = "Créer simplement et rapidement votre site de Petites Annonces"
 
-version = "0.1.0~ynh3"
+version = "0.1.0~ynh4"
 
 maintainers = ["Antoine"]
 
@@ -37,7 +37,7 @@ ram.runtime = "50M"
     default = "visitors"
 
     [install.categories]
-    ask.fr = "Vous pouvez éditer un fichier categories.csv pour personnaliser les catégories d'annonces en suivant l'exemple du fichier original"
+    ask.fr = "Éditer un fichier categories.csv pour personnaliser les catégories d'annonces ?"
     help.fr  = "Pour éditer le fichier categories.cvs, téléchargez le fichier original en cliquant ici https://framagit.org/anto1ne/petitesannonces/-/raw/master/bdd/categories.csv?ref_type=heads&inline=false, éditez-le localement avec votre éditeur de texte en respectant son format (bien garder les `1;` , `2;`, etc...), puis ajoutez-le en cliquant sur le champ ci-dessus"
     type = "file"
     accept = [".csv"]
@@ -46,7 +46,7 @@ ram.runtime = "50M"
     optional = true
 
     [install.regions]
-    ask.fr = "Vous pouvez éditer un fichier regions.csv pour personnaliser les lieux des annonces en suivant cet exemple du fichier original"
+    ask.fr = "Éditer un fichier regions.csv pour personnaliser les lieux des annonces ?"
     help.fr = "Pour éditer le fichier regions.cvs, téléchargez le ici https://framagit.org/anto1ne/petitesannonces/-/raw/master/bdd/regions.csv?ref_type=heads&inline=false, éditez-le  localement avec votre éditeur de texte en respectant son format (bien garder les `1;`, `2;`, etc...), puis ajoutez-le en cliquant sur le champ ci-dessus"
     type = "file"
     accept = [".csv"]
