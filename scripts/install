@@ -53,7 +53,7 @@ chmod o-rwx "$install_dir/bdd/regions.csv"
 chown $app:www-data "$install_dir/bdd/regions.csv"
 fi
 
-ynh_replace_string --match_string="                                                        <p><label for="motdepasse">Mot de passe* :" --replace_string="                                                        <p><label for="motdepasse">Mot de passe* (à conserver pour suprimer l'annonce) :" --target_file="$install_dir/vue/vue_ajout.php"
+ynh_replace_string --match_string="                                                        <p><label for="motdepasse">Mot de passe* :" --replace_string="                                                        <p><label for="motdepasse">Mot de passe* (à conserver pour suprimer l'annonce) :" --target_file="install_dir/vue/vue_ajout.php"
 
 #=================================================
 # SETUP APPLICATION WITH CURL
