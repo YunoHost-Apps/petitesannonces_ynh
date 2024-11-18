@@ -55,7 +55,8 @@ fi
 
 ynh_replace_string --match_string="Mot de passe" --replace_string="Mot de passe (à conserver pour suprimer la supression)" --target_file="$install_dir/vue/vue_ajout.php"
 
-ynh_replace_string --match_string="Petites Annonces" --replace_string="$titre_page" --taget_file="$install_dir/vue/vue_list.php"
+
+ynh_replace_string --match_string="Petites Annonces" --replace_string="$titre_page" --target_file="$install_dir/vue/vue_list.php"
 
 #=================================================
 # SETUP APPLICATION WITH CURL
