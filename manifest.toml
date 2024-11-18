@@ -40,18 +40,14 @@ ram.runtime = "50M"
     ask.fr = "Éditer un fichier categories.csv pour personnaliser les catégories d'annonces ?"
     help.fr  = "Pour éditer le fichier categories.cvs, téléchargez le fichier original en cliquant ici https://framagit.org/anto1ne/petitesannonces/-/raw/master/bdd/categories.csv?ref_type=heads&inline=false, éditez-le localement avec votre éditeur de texte en respectant son format (bien garder les `1;` , `2;`, etc...), puis ajoutez-le en cliquant sur le champ ci-dessus"
     type = "file"
-    accept = [".csv"]
     bind = "/tmp/categories.csv"
-    redact = true
     optional = true
 
     [install.regions]
     ask.fr = "Éditer un fichier regions.csv pour personnaliser les lieux des annonces ?"
     help.fr = "Pour éditer le fichier regions.cvs, téléchargez le ici https://framagit.org/anto1ne/petitesannonces/-/raw/master/bdd/regions.csv?ref_type=heads&inline=false, éditez-le  localement avec votre éditeur de texte en respectant son format (bien garder les `1;`, `2;`, etc...), puis ajoutez-le en cliquant sur le champ ci-dessus"
     type = "file"
-    accept = [".csv"]
     bind = "/tmp/regions.csv"
-    redact = true
     optional = true
 
 [resources]
