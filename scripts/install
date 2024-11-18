@@ -32,7 +32,7 @@ ynh_add_fpm_config
 ynh_add_nginx_config
 
 #=================================================
-# ADD A CONFIGURATION
+# ADD  CONFIGURATIONS
 #=================================================
 ynh_script_progression --message="Adding a configuration file..." --weight=1
 
@@ -40,6 +40,23 @@ ynh_add_config --template="config.php" --destination="$install_dir/conf/config.p
 
 chmod 400 "$install_dir/conf/config.php"
 chown $app:$app "$install_dir/conf/config.php"
+
+if [ -n "${categories:-}" ]; then
+cp $categories "$install_dir/bdd/categories.csv"
+chmod o-rwx "$install_dir/bdd/categories.csv"
+chown $app:www-data "$install_dir/bdd/categories.csv"
+fi
+
+if [ -n "${regions:-}" ]; then
+cp $regions "$install_dir/bdd/regions.csv"
+chmod o-rwx "$install_dir/bdd/regions.csv"
+chown $app:www-data "$install_dir/bdd/regions.csv"
+fi
+
+ynh_replace_string --match_string="Mot de passe" --replace_string="Mot de passe (à conserver pour suprimer la supression)" --target_file="$install_dir/vue/vue_ajout.php"
+
+
+ynh_replace_string --match_string="Petites Annonces" --replace_string="$titre_page" --target_file="$install_dir/vue/vue_liste.php"
 
 #=================================================
 # SETUP APPLICATION WITH CURL
