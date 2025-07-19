@@ -5,7 +5,7 @@ name = "Petites Annonces"
 description.en = "Make your own classified advertising website easily"
 description.fr = "Créer simplement et rapidement votre site de Petites Annonces"
 
-version = "0.1.0~ynh3"
+version = "0.1.0~ynh4"
 
 maintainers = ["Antoine"]
 
